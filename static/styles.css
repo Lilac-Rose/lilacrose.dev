@@ -1,0 +1,104 @@
+/* Root Variables for Colors */
+:root {
+    --background-color: #0a0a0a; /* Dark black */
+    --text-color: #d8b4fe; /* Light purple */
+    --accent-color: #7c3aed; /* Bright purple */
+    --sidebar-bg: #1e1e1e; /* Slightly lighter black */
+    --sidebar-border: #4c1d95; /* Dark purple */
+    --link-color: #d8b4fe; /* Light purple */
+    --link-hover-color: #7c3aed; /* Bright purple */
+}
+
+/* General Styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Terminal Container */
+.terminal {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    border-right: 2px solid var(--sidebar-border);
+}
+
+.sidebar-header h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: var(--accent-color);
+}
+
+.sidebar-header p {
+    font-size: 0.9em;
+    margin: 5px 0 20px 0;
+    color: var(--text-color);
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    margin: 15px 0;
+}
+
+.nav a {
+    font-size: 1.1em;
+    color: var(--link-color);
+}
+
+.nav a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.section p, .section ul {
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.section ul {
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin: 10px 0;
+}
