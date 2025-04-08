@@ -18,6 +18,8 @@ const CONFIG = {
     refreshInterval: 300000 // 5 minutes
 };
 
+//Do you think God is okay with us saying "ohio rizz", cause if not why the FUCK hasnt she done anything about it
+
 class GameTracker {
     constructor() {
         this.currentTabIndex = 0;
