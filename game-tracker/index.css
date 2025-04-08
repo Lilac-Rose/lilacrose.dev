@@ -1,0 +1,202 @@
+.tracker-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 152, 205, 0.1);
+    border: 1px dashed var(--terminal-color);
+}
+
+#sync-status {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+.last-updated {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.last-updated .loading {
+    color: var(--terminal-color);
+    font-style: italic;
+}
+
+.sheet-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.sheet-tab {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--terminal-color);
+    color: var(--text-secondary);
+    font-family: 'Share Tech Mono', monospace;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.sheet-tab.active {
+    background-color: var(--terminal-color);
+    color: var(--main-bg);
+    font-weight: bold;
+}
+
+.tracker-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--terminal-color);
+    max-height: 60vh;
+}
+
+.tracker-table-scroll {
+    min-width: fit-content;
+}
+
+#tracker-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tracker-table th {
+    background-color: rgba(0, 152, 205, 0.9);
+    color: var(--main-bg);
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 2px solid var(--terminal-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#tracker-table td {
+    padding: 0.8rem;
+    border-bottom: 1px dashed var(--terminal-color);
+    vertical-align: top;
+}
+
+#tracker-table tr:last-child td {
+    border-bottom: none;
+}
+
+#tracker-table tr:hover {
+    background-color: rgba(0, 152, 205, 0.05);
+}
+
+.tracker-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--terminal-color);
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.terminal-btn {
+    background-color: transparent;
+    border: 1px solid var(--terminal-color);
+    color: var(--terminal-color);
+    padding: 0.5rem 1rem;
+    font-family: 'Share Tech Mono', monospace;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.terminal-btn:hover {
+    background-color: var(--terminal-color);
+    color: var(--main-bg);
+}
+
+/* Status indicators */
+.status-complete {
+    color: var(--online);
+}
+
+.status-inprogress {
+    color: var(--development);
+}
+
+.status-planned {
+    color: var(--text-secondary);
+}
+
+/* Error states */
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    color: var(--terminal-color);
+    line-height: 1.6;
+}
+
+.error-message a.terminal-btn {
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* Fullscreen iframe */
+.sheet-iframe {
+    width: 100%;
+    height: 70vh;
+    border: none;
+    background: var(--secondary-bg);
+}
+
+/* True/False styling */
+.cell-true {
+    color: var(--online);
+    font-weight: bold;
+}
+
+.cell-false {
+    color: var(--offline);
+    font-weight: bold;
+}
+
+/* Hidden columns/rows */
+.hidden-column, .hidden-row {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tracker-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+   
+    .tracker-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+   
+    .terminal-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Spacer rows and cells */
+.spacer-row {
+    height: 1.5rem;
+    background-color: rgba(0, 152, 205, 0.05);
+}
+
+.spacer-row td {
+    border-bottom: 1px dashed rgba(0, 152, 205, 0.3) !important;
+}
+
+.spacer-cell {
+    min-width: 2rem;
+}
