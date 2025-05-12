@@ -1,5 +1,4 @@
 const CONFIG = {
-    apiKey: 'AIzaSyBtWcSlu-PAU8MTjSpPSZStM8lbuSwaNQA',
     sheetId: '14ChiFwiVvRzHDjyI-u1YcAocVM5b8w3TCu2Yb0VvB0k',
     sheetTabs: [
         { name: 'Home Page', gid: '0', sheetName: 'Home Page' },
